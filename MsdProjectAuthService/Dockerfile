@@ -1,4 +1,4 @@
-FROM gradle:jdk10 as builder
+FROM gradle:4.7.0-jdk8-alpine as builder
 COPY --chown=gradle:gradle . /app
 WORKDIR /app
 RUN gradle bootJar
